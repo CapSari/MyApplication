@@ -55,7 +55,7 @@ afterEvaluate {
                 create<MavenPublication>("mathLib") {
                     from(components["release"]) // Use the appropriate component
                     groupId = "com.github.CapSari"
-                    artifactId = "MyApplication" // Change this to your module name
+                    artifactId = "mathLib" // Change this to your module name
                     version = "1.0"
                 }
             }
