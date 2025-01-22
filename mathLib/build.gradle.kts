@@ -54,7 +54,7 @@ afterEvaluate {
             create<MavenPublication>("release") {
                 from(components["release"])
 
-                groupId = "com.github.capsari"
+                groupId = "com.github.CapSari"
                 artifactId = "mathLib"
                 version = "1.0"
             }
