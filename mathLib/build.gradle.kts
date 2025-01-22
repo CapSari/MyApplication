@@ -50,14 +50,21 @@ dependencies {
 }
 afterEvaluate {
     publishing {
-        publications {
-            create<MavenPublication>("release") {
-                from(components["release"])
-
-                groupId = "com.github.CapSari"
-                artifactId = "mathLib"
-                version = "1.0"
+        publishing {
+            publications {
+                create<MavenPublication>("mathLib") {
+                    from(components["release"]) // Use the appropriate component
+                    groupId = "com.github.CapSari"
+                    artifactId = "MyApplication" // Change this to your module name
+                    version = "1.0"
+                }
+            }
+            repositories {
+                maven {
+                    url = uri("https://jitpack.io")
+                }
             }
         }
     }
 }
+
